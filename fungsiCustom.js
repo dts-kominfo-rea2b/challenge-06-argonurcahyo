@@ -32,7 +32,7 @@ const read1 = (next) => {
     }
     let d = JSON.parse(data).message;
     let s = d.split(" ")[1];
-    
+
     resultArray.push(s);
     next();
   });
