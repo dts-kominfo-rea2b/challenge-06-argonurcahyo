@@ -9,6 +9,7 @@ const { bacaData } = require("./fungsiCustom");
     if (err) return console.log(err);
     console.log(data?.join());
   });
+
   console.log("Walaupun tulisan ini diletakkan di setelah bacaData");
   console.log("Namun tulisan ini akan ditampilkan terlebih dahulu");
   console.log("Karena bacaData bersifat asynchronous");
