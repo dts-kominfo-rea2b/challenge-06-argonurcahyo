@@ -20,18 +20,24 @@ let modifyFile3 = (val) => {
 var resultArray = [];
 // TODO: Kerjakan bacaData
 // gunakan variabel file1, file2, dan file3
+<<<<<<< HEAD
 const bacaData = (fnCallback) => {
   fnCallback();
   console.log(read1(() => read2(() => read3())));
 };
 
 const read1 = (next) => {
+=======
+const bacaData = () => {
+  let resultArray = [];
+>>>>>>> 54be03804b676d7d8e479aa9f74926ca040fd7a6
   fs.readFile(file1, 'utf8', (err, data) => {
     if (err) {
       return console.log(`Error : ${err}`);
     }
     let d = JSON.parse(data).message;
     let s = d.split(" ")[1];
+<<<<<<< HEAD
     
     resultArray.push(s);
     next();
@@ -39,27 +45,48 @@ const read1 = (next) => {
 };
 
 const read2 = (next) => {
+=======
+    console.log(s);
+    resultArray.push(s);
+  });
+>>>>>>> 54be03804b676d7d8e479aa9f74926ca040fd7a6
   fs.readFile(file2, 'utf8', (err, data) => {
     if (err) {
       return console.log(`Error : ${err}`);
     }
     let d = JSON.parse(data)[0].message;
     let s = d.split(" ")[1];
+<<<<<<< HEAD
     resultArray.push(s);
     next();
   });
 }
 
 const read3 = () => {
+=======
+    console.log(s);
+    resultArray.push(s);
+  });
+>>>>>>> 54be03804b676d7d8e479aa9f74926ca040fd7a6
   fs.readFile(file3, 'utf8', (err, data) => {
     if (err) {
       return console.log(`Error : ${err}`);
     }
     let d = JSON.parse(data)[0].data.message;
     let s = d.split(" ")[1];
+<<<<<<< HEAD
     resultArray.push(s);
   });
 }
+=======
+    console.log(s);
+    resultArray.push(s);
+  });
+
+  console.log(resultArray);
+  return resultArray;
+};
+>>>>>>> 54be03804b676d7d8e479aa9f74926ca040fd7a6
 
 // ! JANGAN DIMODIFIKASI
 module.exports = {
